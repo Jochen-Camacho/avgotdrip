@@ -1,0 +1,105 @@
+.carouselContOuter {
+  background: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 100%),
+    rgba(90, 0, 42, 0.9),
+    rgb(0 0 0 / 100%)
+  );
+  color: white;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.carouselCont {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.slidesCont {
+  display: flex;
+  max-width: 800px;
+  position: relative;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  margin: 50px auto;
+}
+
+.image {
+  width: 600px;
+  height: 420px;
+  transition: opacity 0.6s, transform 0.5s ease-in-out;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.8);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.current {
+  opacity: 1;
+  position: relative;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.prev,
+.next {
+  opacity: 0.7;
+}
+
+.prev {
+  transform: translateX(40%) scale(0.7);
+}
+
+.next {
+  transform: translateX(-40%) scale(0.7);
+}
+
+.left-arrow,
+.right-arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.left-arrow svg,
+.right-arrow svg {
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  .image {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .image {
+    width: 280px;
+    height: 210px;
+  }
+}

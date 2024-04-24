@@ -1,0 +1,52 @@
+.icon {
+  font-size: clamp(1.5rem, 10vw, 5rem);
+  margin: auto;
+  transition: 1s;
+  z-index: 10;
+}
+
+.icon-spotify {
+  color: #1db954; /* Spotify green */
+}
+
+.icon-youtube {
+  color: #ff0000; /* YouTube red */
+}
+
+.icon-twitter {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.icon-instagram {
+  color: #db3a70;
+}
+
+.icon-white,
+.icon-apple {
+  color: white;
+}
+
+.icon-apple {
+  color: white;
+  margin-top: -5px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeup 1.5s forwards 1.5s;
+  margin-top: 220px;
+  opacity: 0;
+}
+
+.title {
+  font-family: "Rzyes";
+  font-size: clamp(3.5rem, 10vw, 10rem);
+  color: black;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #493e3e,
+    1px 1px 0 #ffffff;
+  margin-bottom: 30px;
+}

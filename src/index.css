@@ -1,13 +1,47 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scrollbar-width: none;
+  scrollbar-color: black grey;
+}
+
+body {
+  margin: 0;
+}
+
+.page-title {
+  font-size: clamp(2rem, 5vw, 40px);
+  color: white;
+}
+
+.inView {
+  animation: fadeup 2s ease forwards;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@font-face {
+  font-family: "Rzyes";
+  src: url(".\\assests\\fonts\\ryzes-ax92x.ttf") format("truetype");
+}
+
+@media only screen and (max-width: 600px) {
+  .icon-apple {
+    margin-top: -1;
+  }
 }
