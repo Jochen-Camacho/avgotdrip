@@ -88,10 +88,27 @@ a {
   border-color: black;
 }
 
+.seeMoreCont {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.seeMoreBtn {
+  background-color: rgba(49, 2, 18, 0.9);
+  color: white;
+  padding: 10px 25px;
+  font-size: clamp(100%, 5vw, 20px);
+  border-radius: 20px;
+  border: 1px;
+  margin-top: 25px;
+}
+
 @media only screen and (max-width: 900px) {
   .recent-tracks {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     column-gap: 30px;
     row-gap: 40px;
   }

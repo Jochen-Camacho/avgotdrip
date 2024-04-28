@@ -6,6 +6,7 @@ export default function Recents() {
   const [songs, setSongs] = React.useState(data.tracks);
   const trackRef = React.useRef();
   const [istrackVisible, setIsTrackVisible] = React.useState();
+  const [seeMore, setSeeMore] = React.useState(false);
   console.log(istrackVisible);
 
   React.useEffect(() => {
@@ -27,7 +28,8 @@ export default function Recents() {
     document.querySelector(".latest").classList.add("buttonSortActive");
   }, []);
 
-  let displaySongs = songs.map((song, index) => {
+  let tempSongs = !seeMore ? songs.slice(0, 6) : songs.slice(0, -1);
+  let displaySongs = tempSongs.map((song, index) => {
     return (
       <div key={index} className="track">
         <a href={song.link} target="_blank" rel="noreferrer">
@@ -73,6 +75,10 @@ export default function Recents() {
     }
   }
 
+  const handleSeeMore = () => {
+    setSeeMore(!seeMore);
+  };
+
   return (
     <div className="tracksCont">
       <div className="tracks" ref={trackRef}>
@@ -99,6 +105,11 @@ export default function Recents() {
         </div>
 
         <div className="recent-tracks">{displaySongs}</div>
+        <div className="seeMoreCont">
+          <button className="seeMoreBtn" onClick={handleSeeMore}>
+            {!seeMore ? "More" : "Less"}
+          </button>
+        </div>
       </div>
     </div>
   );
