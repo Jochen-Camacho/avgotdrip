@@ -28,7 +28,7 @@ export default function Recents() {
     document.querySelector(".latest").classList.add("buttonSortActive");
   }, []);
 
-  let tempSongs = !seeMore ? songs.slice(0, 6) : songs.slice(0, -1);
+  let tempSongs = !seeMore ? songs.slice(0, 8) : songs.slice(0, -1);
   let displaySongs = tempSongs.map((song, index) => {
     return (
       <div key={index} className="track">
