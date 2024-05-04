@@ -29,10 +29,10 @@ To get this project running locally, follow these steps:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Jochen-Camacho/Avgotdrip.git
+git clone https://github.com/Jochen-Camacho/avgotdrip.git
 
 # Navigate to the project directory
-cd Avgotdrip
+cd avgotdrip
 
 # Install dependencies
 npm install
